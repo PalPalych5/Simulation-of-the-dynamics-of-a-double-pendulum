@@ -1812,24 +1812,21 @@ Rectangle {
     // Этот обработчик синхронизирует все состояния при изменении типа графика
     onCurrentChartTypeChanged: {
         console.log("currentChartType changed to: " + currentChartType);
-        
-        // Принудительно обновляем все зависимые элементы, которые определяют видимость/активность
-        // Это помогает избежать ситуаций, когда некоторые элементы не получают обновление
+
+        // При переключении в режим Пуанкаре просто очищаем текст у селекторов,
+        // так как они становятся невидимыми.
         if (currentChartType === "poincare") {
-            // Для карты Пуанкаре скрываем селекторы осей
-            if (xAxisSelectorText) xAxisSelectorText.text = xAxisSelector.customDisplayText;
-            if (yAxisSelectorText) yAxisSelectorText.text = yAxisSelector.customDisplayText;
-        } 
-        
-        // Делаем это через callLater для правильного порядка обновлений
-        // Это критически важно - даёт возможность QML обработать изменение состояния
-        // перед тем, как мы запросим перерисовку
+            if (xAxisSelectorText) xAxisSelectorText.text = "-"; // Ставим прочерк
+            if (yAxisSelectorText) yAxisSelectorText.text = "-"; // Ставим прочерк
+        } else {
+            // При возвращении к обычным графикам, восстанавливаем текст
+            if (xAxisSelectorText) xAxisSelectorText.text = xAxisSelector.currentText;
+            if (yAxisSelectorText) yAxisSelectorText.text = yAxisSelector.currentText;
+        }
+
         Qt.callLater(function() {
-            // Полное обновление данных и визуального представления
             updateChartDataAndPaint();
-            
-            // Запрашиваем дополнительную перерисовку после обновления данных
-            // Это помогает избежать проблем с "отскакиванием" отображения
+
             Qt.callLater(function() {
                 if (lineChartCanvas && lineChartCanvas.available) {
                     lineChartCanvas.requestPaint();
