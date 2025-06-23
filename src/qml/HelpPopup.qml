@@ -18,14 +18,13 @@ Popup {
         border.color: mainWindow.isDarkTheme ? "#555555" : "#C0C0C0"
     }
 
-    // --- Иконка-крестик для закрытия ---
     Button {
         id: closeIcon
         anchors.top: parent.top
         anchors.right: parent.right
         anchors.margins: 5
 
-        icon.source: "qrc:/icons/cross.svg" // Убедитесь, что иконка есть в ресурсах
+        icon.source: "qrc:/icons/cross.svg"
         icon.width: 18
         icon.height: 18
         icon.color: mainWindow.isDarkTheme ? "#CCCCCC" : "#333333"
@@ -84,7 +83,7 @@ Popup {
                     color: mainWindow.isDarkTheme ? "#DCDCDC" : "#333333"
 
                     text: {
-                        var githubLink = "https://github.com/darthpsl/Double-Pendulum-qt";
+                        var githubLink = "https://github.com/PalPalych5/Simulation-of-the-dynamics-of-a-double-pendulum";
                         var headerColor = mainWindow.isDarkTheme ? '#AADEFF' : '#005A9C';
                         var linkColor = mainWindow.isDarkTheme ? '#66B2FF' : '#0078D7';
 
