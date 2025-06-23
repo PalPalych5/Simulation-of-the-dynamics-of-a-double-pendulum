@@ -1,0 +1,47 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file alias="icons/play.svg">images/play.svg</file>
+        <file alias="icons/pause.svg">images/pause.svg</file>
+        <file alias="icons/reset.svg">images/reset.svg</file>
+        <file alias="icons/wastebasket.svg">images/wastebasket.svg</file>
+        <file alias="icons/cross.svg">images/cross.svg</file>
+        <file alias="icons/download.svg">images/download.svg</file>
+        <file alias="icons/eye.svg">images/eye.svg</file>
+        <file alias="icons/analysis.svg">images/analysis.svg</file>
+        <file alias="icons/plus.svg">images/plus.svg</file>
+        <file alias="icons/settings.svg">images/settings.svg</file>
+        <file alias="icons/settings2.svg">images/settings2.svg</file>
+        <file alias="icons/charts.svg">images/chart.svg</file>
+        <file alias="icons/dots.svg">images/dots.svg</file>
+        <file alias="icons/3D.svg">images/3D.svg</file>
+        <file alias="icons/sun.svg">images/sun.svg</file>
+        <file alias="icons/moon.svg">images/moon.svg</file>
+        <file alias="icons/clock.svg">images/clock.svg</file>
+        <file alias="icons/help.svg">images/help.svg</file>
+        <file alias="icons/step.svg">images/step.svg</file>
+        <file alias="icons/scribble.svg">images/scribble.svg</file> 
+        <file alias="icons/coordinate.svg">images/coordinate.svg</file>
+
+        <file alias="Main.qml">../src/qml/Main.qml</file>
+        <file alias="ParameterStepper.qml">../src/qml/ParameterStepper.qml</file>
+        <file alias="ChartPlaceholder.qml">../src/qml/ChartPlaceholder.qml</file>
+        <file alias="SplashScreen.qml">../src/qml/SplashScreen.qml</file>
+        <file alias="IncrementalTraceDrawer.qml">../src/qml/IncrementalTraceDrawer.qml</file>
+
+        <file alias="images/splash_background.png">images/splash_background.png</file>
+        <file alias="images/studio_env.hdr">images/studio_env.hdr</file>
+        <file alias="images/github_icon.png">images/github_icon.png</file>
+        
+        <file alias="textures/aluminum_roughness.png">../models/aluminum_roughness.png</file>
+
+        <file alias="models/DoublePendulum.qml">../models/DoublePendulum.qzb/DoublePendulum.qml</file>
+        <file alias="models/meshes/pendulum_005_mesh.mesh">../models/DoublePendulum.qzb/meshes/pendulum_005_mesh.mesh</file>
+        <file alias="models/meshes/pendulum_mesh.mesh">../models/DoublePendulum.qzb/meshes/pendulum_mesh.mesh</file>
+        <file alias="models/meshes/pendulum_001_mesh.mesh">../models/DoublePendulum.qzb/meshes/pendulum_001_mesh.mesh</file>
+        <file alias="models/meshes/pendulum_002_mesh.mesh">../models/DoublePendulum.qzb/meshes/pendulum_002_mesh.mesh</file>
+        <file alias="models/meshes/pendulum_003_mesh.mesh">../models/DoublePendulum.qzb/meshes/pendulum_003_mesh.mesh</file>
+        <file alias="models/meshes/pendulum_004_mesh.mesh">../models/DoublePendulum.qzb/meshes/pendulum_004_mesh.mesh</file>
+        <file alias="models/meshes/head_mesh.mesh">../models/DoublePendulum.qzb/meshes/head_mesh.mesh</file>
+    </qresource>
+</RCC> 
